@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
+import Letter from './Letter'
 
 class Solution extends Component {
     render() {
-        let hint = 'Your ideal mood when coding.'
-        let lettersToGuess = []
-        for(let i = 0; i < 4; i++){
-            lettersToGuess.push('_ ')
-        }
+        // let lettersToGuess = []
+        // for(let i = 0; i < this.state.solution.word.length; i++){
+        //     lettersToGuess.push('_ ')
+        // }
         return (
             <div>
-                <div>{lettersToGuess.map(l => <span>{l}</span>)}</div>
-                <div><em>{hint}</em></div>
+                <div>{Array.from(this.props.solution.word).map(m => (<Letter letter={this.props.letterStatus[m] === true? m : "_"} key = {m}/>))}</div>
+                <div><em>{this.props.solution.hint}</em></div>
             </div>
         );
     }
