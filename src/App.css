@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.high{
+  color: rgb(57, 109, 57);
+}
+
+.medium{
+  color: rgb(214, 214, 103);
+}
+
+.low{
+  color: rgb(197, 75, 75);
+}
